@@ -15,7 +15,7 @@ Things to Read:
 
 
   Patterns
-    Gamma, Helm, Johnsom, Vlissides (Gang of Four): Design Patterns,
+    Gamma, Helm, Johnson, Vlissides (Gang of Four): Design Patterns,
     Elements of Reusable Object-Oriented Software
       http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612
       Browse the entire book
@@ -99,3 +99,12 @@ Things to Watch:
 
   Static Typing
     http://blog.cleancoder.com/uncle-bob/2017/01/13/TypesAndTests.html
+
+  Michael Feathers:
+    Tell Above, and Ask Below - Hybridizing OO and Functional Design
+    http://michaelfeathers.typepad.com/michael_feathers_blog/2012/03/tell-above-and-ask-below-hybridizing-oo-and-functional-design.html
+
+
+Tutorials:
+https://online.visual-paradigm.com/tutorials/sequence-diagram-tutorial/
+https://creately.com/blog/diagrams/sequence-diagram-tutorial/
