@@ -2,45 +2,55 @@ require_relative '../../test_helper'
 require_relative '../lib/bottles'
 
 class BottlesTest < Minitest::Test
-  def test_the_first_verse
-    expected = "99 bottles of beer on the wall, " +
+  def test_common_pattern_upper_bound
+    expected =
+      "99 bottles of beer on the wall, " +
       "99 bottles of beer.\n" +
       "Take one down and pass it around, " +
       "98 bottles of beer on the wall.\n"
     assert_equal expected, Bottles.new.verse(99)
   end
 
-  def test_another_verse
-    expected = "3 bottles of beer on the wall, " +
+  def test_common_pattern_lower_bound
+    expected =
+      "3 bottles of beer on the wall, " +
       "3 bottles of beer.\n" +
       "Take one down and pass it around, " +
       "2 bottles of beer on the wall.\n"
     assert_equal expected, Bottles.new.verse(3)
   end
 
-  def test_verse_2
-    expected = "2 bottles of beer on the wall, " +
+  def test_special_verse_2
+    expected =
+      "2 bottles of beer on the wall, "  +
       "2 bottles of beer.\n" +
       "Take one down and pass it around, " +
       "1 bottle of beer on the wall.\n"
-    assert_equal expected, Bottles.new.verse(2)
+      assert_equal expected, Bottles.new.verse(2)
   end
 
-  def test_verse_1
-    expected = "1 bottle of beer on the wall, " +
+  def test_special_verse_1
+    expected =
+      "1 bottle of beer on the wall, " +
       "1 bottle of beer.\n" +
       "Take it down and pass it around, " +
       "no more bottles of beer on the wall.\n"
     assert_equal expected, Bottles.new.verse(1)
   end
 
-  def test_verse_0
-    expected = "No more bottles of beer on the wall, " +
+  def test_special_verse_0
+    expected =
+      "No more bottles of beer on the wall, " +
       "no more bottles of beer.\n" +
       "Go to the store and buy some more, " +
       "99 bottles of beer on the wall.\n"
     assert_equal expected, Bottles.new.verse(0)
   end
+
+  # Task 3:
+  #   These are the original #verses tests.  Are both necessary?
+  #   If not, which one should you keep?
+  #   If you keep only one, what's its name?
 
   def test_a_couple_verses
     expected = "99 bottles of beer on the wall, " +
@@ -72,6 +82,10 @@ class BottlesTest < Minitest::Test
       "99 bottles of beer on the wall.\n"
     assert_equal expected, Bottles.new.verses(2, 0)
   end
+
+  # Task 4:
+  # As the code is currently written, is it possible to test song
+  # without setting 'expected' to this wall of text?
 
   def test_the_whole_song
     expected = <<~SONG
