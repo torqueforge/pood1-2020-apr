@@ -47,45 +47,34 @@ class BottlesTest < Minitest::Test
     assert_equal expected, Bottles.new.verse(0)
   end
 
-  # Task 3:
-  #   These are the original #verses tests.  Are both necessary?
-  #   If not, which one should you keep?
-  #   If you keep only one, what's its name?
-
-  def test_a_couple_verses
-    expected = "99 bottles of beer on the wall, " +
-      "99 bottles of beer.\n" +
+  def test_verses
+    expected =
+      "47 bottles of beer on the wall, " +
+      "47 bottles of beer.\n" +
       "Take one down and pass it around, " +
-      "98 bottles of beer on the wall.\n" +
+      "46 bottles of beer on the wall.\n" +
       "\n" +
-      "98 bottles of beer on the wall, " +
-      "98 bottles of beer.\n" +
+      "46 bottles of beer on the wall, " +
+      "46 bottles of beer.\n" +
       "Take one down and pass it around, " +
-      "97 bottles of beer on the wall.\n"
-    assert_equal expected, Bottles.new.verses(99, 98)
+      "45 bottles of beer on the wall.\n" +
+      "\n" +
+      "45 bottles of beer on the wall, " +
+      "45 bottles of beer.\n" +
+      "Take one down and pass it around, " +
+      "44 bottles of beer on the wall.\n" +
+      "\n" +
+      "44 bottles of beer on the wall, " +
+      "44 bottles of beer.\n" +
+      "Take one down and pass it around, " +
+      "43 bottles of beer on the wall.\n" +
+      "\n" +
+      "43 bottles of beer on the wall, " +
+      "43 bottles of beer.\n" +
+      "Take one down and pass it around, " +
+      "42 bottles of beer on the wall.\n"
+    assert_equal expected, Bottles.new.verses(47, 43)
   end
-
-  def test_a_few_verses
-    expected = "2 bottles of beer on the wall, " +
-      "2 bottles of beer.\n" +
-      "Take one down and pass it around, " +
-      "1 bottle of beer on the wall.\n" +
-      "\n" +
-      "1 bottle of beer on the wall, " +
-      "1 bottle of beer.\n" +
-      "Take it down and pass it around, " +
-      "no more bottles of beer on the wall.\n" +
-      "\n" +
-      "No more bottles of beer on the wall, " +
-      "no more bottles of beer.\n" +
-      "Go to the store and buy some more, " +
-      "99 bottles of beer on the wall.\n"
-    assert_equal expected, Bottles.new.verses(2, 0)
-  end
-
-  # Task 4:
-  # As the code is currently written, is it possible to test song
-  # without setting 'expected' to this wall of text?
 
   def test_the_whole_song
     expected = <<~SONG
